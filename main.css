@@ -9,6 +9,9 @@ html, body {
     background-color: #CCDBDC;
 }
 
+.pure-g {
+    letter-spacing: 0cm;
+}
 .main {
       margin-top: 50px;
       margin-left: auto;
@@ -32,7 +35,6 @@ p {
     /* height: 30vh; */
     background-color: #003249;
     border-radius: 20px;
-    letter-spacing: 0cm !important;
     text-align: left;
     margin: 10px;
 }
@@ -45,7 +47,6 @@ p {
 .dices {
     background-color: #80CED7;
     border-radius: 20px;
-    letter-spacing: 0cm !important;
     text-align: left;
     margin: 0 20px 20px 20px;
     padding: 10px;
@@ -54,7 +55,7 @@ p {
     justify-content: space-around;
 }
 
-.dice-box{
+.dice-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,4 +68,15 @@ p {
 .tick {
     transform: scale(3);
     margin: 10px;
+}
+
+.buttons {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.pure-button {
+    background-color: #9AD1D4;
 }
