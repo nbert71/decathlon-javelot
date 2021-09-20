@@ -2,11 +2,11 @@
 
 ## FRONT
 
-- [ ] créer la page (HTML/CSS)
-  - [ ] Créer titre
-  - [ ] surface de jeu
-    - [ ] affichage des dés disponibles
-    - [ ] Cases à ticker
+- [X] créer la page (HTML/CSS)
+  - [X] Créer titre
+  - [X] surface de jeu
+    - [X] affichage des dés disponibles
+    - [X] Cases à ticker
   - [ ] bouton lancer les dés
   - [ ] affichage des dés écartés
   - [ ] affichage du score
