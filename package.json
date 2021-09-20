@@ -1,0 +1,22 @@
+{
+  "name": "decathlon-javelot",
+  "version": "1.0.0",
+  "description": "Projet MIE I1 Decathlon",
+  "main": "javelot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbert71/decathlon-javelot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbert71/decathlon-javelot/issues"
+  },
+  "homepage": "https://github.com/nbert71/decathlon-javelot#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
