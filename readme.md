@@ -1,3 +1,3 @@
 # Projet de MIE 2021 - Informatique Temps 1
 
- Nicolas BERT - Killian ROYANTy
+ Nicolas BERT - Killian ROYANT
