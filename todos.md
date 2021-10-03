@@ -16,10 +16,10 @@
 ## BACK
 
 - [ ] créer les fonctions JS
-  - [ ] lancer un dé entre 1 à 6
+  - [X] lancer un dé entre 1 à 6
   - [ ] fonction lancer de dés restants
-  - [ ] fonction savoir si dé pair/impair
+  - [X] fonction savoir si dé pair/impair
   - [ ] fonction écarter/conserver un dé
   - [ ] fonction récupérer les dés conservés
-  - [ ] fonction calcul score
+  - [X] fonction calcul score
   - [ ] fonction échec
