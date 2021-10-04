@@ -1,4 +1,5 @@
 var noombreDes = 6;
+var score = 0;
 
 function lancerDe() {
   // random --> [0,1[
@@ -7,10 +8,11 @@ function lancerDe() {
 
 function lancerDes() {
   for (let i = 0; i < noombreDes; i++) {
-    if(isTicked(i)) {
+    if (isTicked(i)) {
       disableCheckbox(i);
-    } else document.querySelector("#dice"+ (i + 1)).textContent = lancerDe()
+    } else document.querySelector("#dice" + (i + 1)).textContent = lancerDe()
   }
+  score += getSumTickedNumber()
 }
 
 function estPair(de) {
@@ -34,31 +36,45 @@ document.querySelector("#roll_dices").addEventListener("click", (event) => {
   event.preventDefault();
 })
 
+function getDice(i) {
+  return document.querySelector("#dice" + (i + 1)).textContent
+}
+
 function getDices() {
   liste_des = [];
   for (let i = 0; i < noombreDes; i++) {
-    liste_des[i] = document.querySelector("#dice" + (i+1)).textContent;
+    liste_des[i] = document.querySelector("#dice" + (i + 1)).textContent;
   }
   return liste_des
 }
 
-function getAllTicked() {
+function getCheckboxValue() {
   Ticked = []
   for (let i = 0; i < noombreDes; i++) {
-    if(isTicked(i)) {
+    if (isTicked(i)) {
       Ticked[i] = true;
-    }
-    else Ticked[i] = false;
+    } else Ticked[i] = false;
   }
   return Ticked
 }
 
 function isTicked(i) {
-  return document.querySelector("#tick" + (i+1)).checked
+  return document.querySelector("#tick" + (i + 1)).checked
 }
 
 function disableCheckbox(i) {
   if (isTicked(i)) {
-    document.querySelector("#tick" + (i+1)).disabled = true
+    document.querySelector("#tick" + (i + 1)).disabled = true
   }
+}
+
+function getSumTickedNumber() {
+  let somme = 0
+  for (let i = 0; i < noombreDes; i++) {
+    if (isTicked(i) && parseInt(getDice(i)) % 2 != 0) {
+      value = parseInt(getDice(i));
+      somme += value;
+    }
+  }
+  return somme
 }
