@@ -1,5 +1,11 @@
 # Todos
 
+- [ ] gérer click --> score infini
+- [ ] gérer échec (dés restants que pairs)
+- [ ] ajout règles du jeu
+- [ ] bouton et fonction reset
+- [ ] gérer nb max de lancers de dés
+
 ## FRONT
 
 - [X] créer la page (HTML/CSS)
@@ -7,9 +13,9 @@
   - [X] surface de jeu
     - [X] affichage des dés disponibles
     - [X] Cases à ticker
-  - [ ] bouton lancer les dés
-  - [ ] affichage des dés écartés
-  - [ ] affichage du score
+  - [X] bouton lancer les dés
+  - [X] affichage des dés écartés
+  - [X] affichage du score
   - [ ] bouton reset
   - [ ] Section règles du jeu
 
@@ -17,9 +23,9 @@
 
 - [ ] créer les fonctions JS
   - [X] lancer un dé entre 1 à 6
-  - [ ] fonction lancer de dés restants
+  - [X] fonction lancer de dés restants
   - [X] fonction savoir si dé pair/impair
-  - [ ] fonction écarter/conserver un dé
-  - [ ] fonction récupérer les dés conservés
+  - [X] fonction écarter/conserver un dé
+  - [X] fonction récupérer les dés conservés
   - [X] fonction calcul score
   - [ ] fonction échec
