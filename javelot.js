@@ -1,10 +1,12 @@
+var noombreDes = 6;
+
 function lancerDe() {
   // random --> [0,1[
   return Math.floor(6 * Math.random() + 1);
 }
 
 function lancerDes() {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < noombreDes; i++) {
     if(isTicked(i)) {
       disableCheckbox(i);
     } else document.querySelector("#dice"+ (i + 1)).textContent = lancerDe()
@@ -15,7 +17,8 @@ function estPair(de) {
   return de % 2 == 0;
 }
 
-function calculScore(liste_des) {
+function calculScore() {
+  liste_des = getDices();
   let score = 0;
   for (let index = 0; index < liste_des.length; index++) {
     if (liste_des[i] % 2 != 0) {
@@ -33,7 +36,7 @@ document.querySelector("#roll_dices").addEventListener("click", (event) => {
 
 function getDices() {
   liste_des = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < noombreDes; i++) {
     liste_des[i] = document.querySelector("#dice" + (i+1)).textContent;
   }
   return liste_des
@@ -41,7 +44,7 @@ function getDices() {
 
 function getAllTicked() {
   Ticked = []
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < noombreDes; i++) {
     if(isTicked(i)) {
       Ticked[i] = true;
     }
