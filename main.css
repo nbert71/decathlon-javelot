@@ -1,12 +1,14 @@
-/* #CCDBDC
-#9AD1D4
-#80CED7
-#007EA7
-#003249
- */
+:root {
+    --blue1: #CCDBDC;
+    --blue2: #9AD1D4;
+    --blue3: #80CED7;
+    --blue4: #007EA7;
+    --blue5: #003249;
+}
+
 html, body {
     margin: 0;
-    background-color: #CCDBDC;
+    background-color: var(--blue1);
 }
 
 .pure-g {
@@ -28,12 +30,17 @@ p {
     font-size: 20pt;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--blue4)    ;
+    border-radius: 20px;
+    color: #FFFFFF;
 }
 
 .box, .rules {
     width: 100vw;
     /* height: 30vh; */
-    background-color: #003249;
+    background-color: var(--blue5);
     border-radius: 20px;
     text-align: left;
     margin: 10px;
@@ -45,7 +52,7 @@ p {
 }
 
 .dices {
-    background-color: #80CED7;
+    background-color: var(--blue3);
     border-radius: 20px;
     text-align: left;
     margin: 0 20px 20px 20px;
@@ -78,5 +85,19 @@ p {
 }
 
 .pure-button {
-    background-color: #9AD1D4;
+    background-color: var(--blue2);
+}
+
+.score-box {
+    font-size: 20pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--blue2);
+    border-radius: 20px;
+}
+
+#score {
+    font-weight: bold;
 }

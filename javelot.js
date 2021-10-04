@@ -1,4 +1,4 @@
-var noombreDes = 6;
+var nombreDes = 6;
 var score = 0;
 
 function lancerDe() {
@@ -7,16 +7,13 @@ function lancerDe() {
 }
 
 function lancerDes() {
-  for (let i = 0; i < noombreDes; i++) {
+  for (let i = 0; i < nombreDes; i++) {
     if (isTicked(i)) {
       disableCheckbox(i);
     } else document.querySelector("#dice" + (i + 1)).textContent = lancerDe()
   }
-  score += getSumTickedNumber()
-}
-
-function estPair(de) {
-  return de % 2 == 0;
+  score += getSumTickedNumber();
+  majScore()
 }
 
 function calculScore() {
@@ -42,7 +39,7 @@ function getDice(i) {
 
 function getDices() {
   liste_des = [];
-  for (let i = 0; i < noombreDes; i++) {
+  for (let i = 0; i < nombreDes; i++) {
     liste_des[i] = document.querySelector("#dice" + (i + 1)).textContent;
   }
   return liste_des
@@ -50,7 +47,7 @@ function getDices() {
 
 function getCheckboxValue() {
   Ticked = []
-  for (let i = 0; i < noombreDes; i++) {
+  for (let i = 0; i < nombreDes; i++) {
     if (isTicked(i)) {
       Ticked[i] = true;
     } else Ticked[i] = false;
@@ -70,11 +67,15 @@ function disableCheckbox(i) {
 
 function getSumTickedNumber() {
   let somme = 0
-  for (let i = 0; i < noombreDes; i++) {
+  for (let i = 0; i < nombreDes; i++) {
     if (isTicked(i) && parseInt(getDice(i)) % 2 != 0) {
       value = parseInt(getDice(i));
       somme += value;
     }
   }
   return somme
+}
+
+function majScore () {
+  document.querySelector("#score").textContent = score
 }
