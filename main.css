@@ -101,3 +101,7 @@ p {
 #score {
     font-weight: bold;
 }
+
+#new-game {
+    margin-top: 20px;
+}
