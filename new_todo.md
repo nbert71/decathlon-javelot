@@ -2,12 +2,13 @@
 
 ## Problèmes à résoudre
 
-- [ ] Score infini
+- [X] Score infini
+- [ ] Faire en sorte que les dés pairs ne puissent pas être cochée ?
 
 ## Front
 
-- [ ] Affichage du score en direct
-- [ ] Créer deux pages distinctes (index et partie)
+- [X] Affichage du score en direct
+- [X] Créer deux pages distinctes (index et partie)
 
 ## Back
 
@@ -25,4 +26,3 @@
     - [ ] Affichage des dés à chaque lancer
     - [ ] Affichage du tableau des scores
     - [ ] Affichage du score
-- [ ] 
