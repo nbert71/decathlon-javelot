@@ -24,7 +24,7 @@ function lancerDes() {
       disableCheckbox(i);
     } else document.querySelector("#dice" + (i + 1)).textContent = lancerDe()
   }
-  score += getSumValidTickedNumber();
+  score = getSumValidTickedNumber();
   majScore()
 }
 
