@@ -96,7 +96,7 @@ function isGameOver () {
     for (let i = 0; i < nombreDes; i++) {
       disableCheckbox(i);
     }
-    document.querySelector("#gameover").style.visibility = 'visible';
+    document.querySelector("#gameover").textContent = 'La partie est terminée !';
     document.querySelector("#replay").style.visibility = 'visible';
   }
 }

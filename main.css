@@ -26,10 +26,16 @@ p {
       font-size: 100px;
 }
 
+.gameover {
+    font-size: 30pt;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
 .title {
-    font-size: 20pt;
+    font-size: 30pt;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--blue4)    ;
@@ -47,16 +53,32 @@ p {
 }
 
 .box-title {
-    padding: 10px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 900;
+    font-size: x-large;
+    padding: 30px 30px 20px 30px;
     color: #FFFFFF;
+}
+
+li {
+    padding: 7px 0px 7px 0px;
+}
+
+.rules-box {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    font-size: large;
+    padding: 5px 60px 20px 60px;
+    color: #FFFFFF;
+    text-align: justify;
 }
 
 .dices {
     background-color: var(--blue3);
     border-radius: 20px;
     text-align: left;
-    margin: 0 20px 20px 20px;
-    padding: 10px;
+    margin: 5px 30px 40px 30px;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -69,7 +91,10 @@ p {
 }
 
 .dice {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 900;
     font-size: 30pt;
+    margin-bottom: 7pt;
 }
 
 .tick {
@@ -82,6 +107,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 15px;
 }
 
 .pure-button {
@@ -90,7 +116,7 @@ p {
 
 .score-box {
     font-size: 20pt;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -98,9 +124,6 @@ p {
     border-radius: 20px;
 }
 
-#score {
-    font-weight: bold;
-}
 
 #new-game {
     margin-top: 20px;
