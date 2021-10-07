@@ -104,7 +104,7 @@ function isGameOver() {
       disableCheckbox(i);
     }
     document.querySelector("#gameover").textContent = 'La partie est terminée !';
-    document.querySelector("#replay").style.visibility = 'visible';
+    document.querySelector("#replay").style.display = 'block';
   }
 }
 
