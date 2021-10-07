@@ -28,12 +28,19 @@ function getDice(i) {
 // et met à jour le score
 function lancerDes() {
   for (let i = 0; i < nombreDes; i++) {
-    if (isTicked(i)) {
-      disableCheckbox(i);
-    } else document.querySelector("#dice" + (i + 1)).textContent = lancerDe()
+    if (!isDisabled(i)) {
+      if (isTicked(i)) {
+        disableCheckbox(i)
+      } else {
+        document.querySelector("#dice" + (i + 1)).textContent = lancerDe();
+        if (getDice(i) % 2 == 0) {
+          document.getElementById("tick" + (i + 1)).style.display = "none";
+        } else document.getElementById("tick" + (i + 1)).style.display = "block";
+      }
+    }
   }
   score = getSumValidTickedNumber();
-  isGameOver ();
+  isGameOver();
 }
 
 // Fonction qui vérifie si le dé i est coché
@@ -42,8 +49,8 @@ function isTicked(i) {
 }
 
 // Fonction qui vérifie si le dé i est actif
-function isActive(i) {
-  return !document.querySelector("#tick" + (i + 1)).disabled
+function isDisabled(i) {
+  return document.querySelector("#tick" + (i + 1)).disabled
 }
 
 // Fonction qui désactive le dé i s'il est coché
@@ -64,16 +71,16 @@ function getSumValidTickedNumber() {
 }
 
 // Fonction qui met à jour le score et l'affichage du bouton de lancer
-function majScore () {
+function majScore() {
   document.querySelector("#score").textContent = score;
   document.querySelector("#roll_dices").style.visibility = 'hidden';
-  if (isAnyEnabledDiceTicked ()) document.querySelector("#roll_dices").style.visibility = 'visible'
+  if (isAnyEnabledDiceTicked()) document.querySelector("#roll_dices").style.visibility = 'visible'
 }
 
 // Fonction qui vérifie s'il existe un dé impair actif est coché
-function isAnyEnabledDiceTicked () {
+function isAnyEnabledDiceTicked() {
   for (let i = 0; i < nombreDes; i++) {
-    if (isTicked(i) && isActive(i) && parseInt(getDice(i)) % 2 != 0) {
+    if (isTicked(i) && !isDisabled(i) && parseInt(getDice(i)) % 2 != 0) {
       return true;
     }
   }
@@ -81,9 +88,9 @@ function isAnyEnabledDiceTicked () {
 }
 
 // Fonction qui vérifie s'il reste des dés disponibles
-function isAnyAvaliableDice () {
+function isAnyAvaliableDice() {
   for (let i = 0; i < nombreDes; i++) {
-    if (isActive(i) && parseInt(getDice(i)) % 2 != 0) {
+    if (!isDisabled(i) && parseInt(getDice(i)) % 2 != 0) {
       return true;
     }
   }
@@ -91,8 +98,8 @@ function isAnyAvaliableDice () {
 }
 
 // Fonction qui vérifie si la partie peut continuer et qui l'arrête sinon
-function isGameOver () {
-  if (game_started && (cpt > 3 || !isAnyAvaliableDice ())) {
+function isGameOver() {
+  if (game_started && (cpt > 3 || !isAnyAvaliableDice())) {
     for (let i = 0; i < nombreDes; i++) {
       disableCheckbox(i);
     }
@@ -121,7 +128,7 @@ document.querySelector("#roll_dices").addEventListener("click", (event) => {
   event.preventDefault();
   document.querySelector("#roll_dices").style.visibility = 'hidden';
   cpt += 1;
-  
+
 })
 
 // Listener clic sur les checkbox (met à jour le score en direct
