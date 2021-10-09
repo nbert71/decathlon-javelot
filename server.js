@@ -8,10 +8,12 @@ const port = 3000;
 
 app.use("/static", express.static(path.join(__dirname, '/static')))
 
+// Redirection de /
 app.get("/", (req, res) => {
     res.redirect(301, '/static/index.html')
 })
 
+// Gestion des 404
 app.use(function (req, res) {
     console.log("URL not found : " + req.url);
 
