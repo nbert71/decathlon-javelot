@@ -13,12 +13,15 @@ app.get("/", (req, res) => {
     res.redirect(301, '/static/index.html')
 })
 
-// Gestion des 404
+//Gestion des 404
 app.use(function (req, res) {
-    console.log("URL not found : " + req.url);
+    console.log("404 URL not found : " + req.url);
 
     res.statusCode = 404;
-    res.redirect("./404.html")
+    res.setHeader('Content-Type', 'text/html');
+
+    res.end("<html><head><meta charset='utf-8'><title>404</title></head><body><h1>Erreur 404.</h1><p>Ressource non trouvée</p></body></html>");
+
 })
 
 app.listen(port, hostname);

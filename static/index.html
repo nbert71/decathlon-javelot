@@ -36,8 +36,11 @@
 </body>
 
 <script>
-    document.querySelector('new-game').addEventListener("click", (event) => {
-        console.log('creer la db + le cookie etc...');
+    document.querySelector('#new-game').addEventListener("click", (event) => {
+        data = {
+            "pseudo": document.querySelector("#pseudo").value
+        }
+        console.log(JSON.stringify(data, null, 2));
     })
 </script>
 
